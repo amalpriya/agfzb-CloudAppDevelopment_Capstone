@@ -1,11 +1,11 @@
   applications:
   - name: djangoapp
     routes:
-      - route: priya-car-dealers.eu-gb.cf.appdomain.cloud
+      - route: $HOST.$DOMAIN
     memory: 128M
     buildpack: python_buildpack
   - name: djangoapp-nginx
     routes:
-      - route: priya-car-dealers.eu-gb.cf.appdomain.cloud/static
+      - route: $HOST.$DOMAIN/static
     memory: 128M
     buildpack: staticfile_buildpack
